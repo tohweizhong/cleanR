@@ -5,8 +5,6 @@
 #3. ZIP codes
 #4. Names
 
-DirtyStreetNames <- read.csv("Dirty Street Names.csv", stringsAsFactors = FALSE)
-DirtyStreetNames <- as.vector(unlist(DirtyStreetNames))
 
 #This will clear up excess whitespace with 4 options----
 #1. Leading spaces
