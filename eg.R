@@ -25,4 +25,4 @@ CleanSpaces(all1, option = "all", returnType = "tokenized")
 CleanSpaces(lead1, option = "abc")
 
 CleanSpaces(StreetNames, option="all")
-CleanSpaces(StreeNames, option="leading")
+CleanSpaces(StreetNames, option="leading")
