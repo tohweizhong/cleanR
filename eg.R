@@ -13,9 +13,16 @@ trail1 <- "bar "
 between1 <- "foo bar"
 all1 <- " foo bar"
 
+StreetNames <- c("BUGIS   STREET ", " ORCHARD ROAD ", "   CHANGI   AIRPORT",
+                 "MANDAI ZOO  ", " NATIONAL  UNIVERSITY  OF   SINGAPORE ", 
+                 " CITY  HALL ", "RAFFLES  PLACE")
+
 # testing
 CleanSpaces(lead1, option = "leading", returnType = "vector")
 CleanSpaces(trail1, option = "trailing", returnType = "vector")
 CleanSpaces(between1, option = "between", returnType = "vector")
 CleanSpaces(all1, option = "all", returnType = "vector")
 CleanSpaces(lead1, option = "abc")
+
+CleanSpaces(StreetNames, option="all")
+CleanSpaces(StreeNames, option="leading")
