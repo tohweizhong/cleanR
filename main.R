@@ -70,3 +70,11 @@ CleanSpaces <- function(data,
   if(returnType == "string") return(OUT)
   else if(returnType == "tokenized") return(unlist(strsplit(OUT, "\\s+")))
 }
+
+
+ExtractNumbers <- function(data){
+  OUT <- gsub("\\D+", " ", data)
+  OUT <- gsub("^\\s+","", OUT)
+  OUT <- strsplit(OUT, " ")
+  return(OUT)
+}

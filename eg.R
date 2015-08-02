@@ -13,9 +13,9 @@ trail1 <- "bar "
 between1 <- "foo bar"
 all1 <- " foo bar"
 
-StreetNames <- c("BUGIS   STREET ", " ORCHARD ROAD ", "   CHANGI   AIRPORT",
-                 "MANDAI ZOO  ", " NATIONAL  UNIVERSITY  OF   SINGAPORE ", 
-                 " CITY  HALL ", "RAFFLES  PLACE")
+StreetNames <- c("BUGIS   STREET #01-05 ", " ORCHARD ROAD #09 - 123 ", "   CHANGI   AIRPORT #08- 08",
+                 "MANDAI ZOO #12- 100  ", " NATIONAL  UNIVERSITY  OF   SINGAPORE S1 #01 - 10", 
+                 " CITY  HALL B1 - 10A", "RAFFLES  PLACE B3 - 12")
 
 # testing
 CleanSpaces(lead1, option = "leading", returnType = "tokenized")
@@ -26,3 +26,6 @@ CleanSpaces(lead1, option = "abc")
 
 CleanSpaces(StreetNames, option="all")
 CleanSpaces(StreetNames, option="leading")
+
+
+ExtractNumbers(StreetNames)
