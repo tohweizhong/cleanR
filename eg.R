@@ -28,4 +28,5 @@ CleanSpaces(StreetNames, option="all")
 CleanSpaces(StreetNames, option="leading")
 
 
-ExtractNumbers(StreetNames)
+ExtractNum(StreetNames)
+ExtractChar(StreetNames)

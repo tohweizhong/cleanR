@@ -72,9 +72,17 @@ CleanSpaces <- function(data,
 }
 
 
-ExtractNumbers <- function(data){
+ExtractNum <- function(data){
   OUT <- gsub("\\D+", " ", data)
   OUT <- gsub("^\\s+","", OUT)
-  OUT <- strsplit(OUT, " ")
+  OUT <- strsplit(OUT, "\\s+")
+  return(OUT)
+}
+
+
+ExtractChar <- function(data){
+  OUT <- gsub("\\d+", " ", data)
+  OUT <- gsub("^\\s+","", OUT)
+  OUT <- strsplit(OUT, "\\s+")
   return(OUT)
 }
