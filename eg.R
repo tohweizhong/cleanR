@@ -18,10 +18,10 @@ StreetNames <- c("BUGIS   STREET ", " ORCHARD ROAD ", "   CHANGI   AIRPORT",
                  " CITY  HALL ", "RAFFLES  PLACE")
 
 # testing
-CleanSpaces(lead1, option = "leading", returnType = "vector")
-CleanSpaces(trail1, option = "trailing", returnType = "vector")
-CleanSpaces(between1, option = "between", returnType = "vector")
-CleanSpaces(all1, option = "all", returnType = "vector")
+CleanSpaces(lead1, option = "leading", returnType = "tokenized")
+CleanSpaces(trail1, option = "trailing", returnType = "tokenized")
+CleanSpaces(between1, option = "between", returnType = "tokenized")
+CleanSpaces(all1, option = "all", returnType = "tokenized")
 CleanSpaces(lead1, option = "abc")
 
 CleanSpaces(StreetNames, option="all")
