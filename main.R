@@ -12,8 +12,17 @@
 #3. Spaces in between
 #4. All of the above
 
-CleanSpaces <- function(data, option=c("leading", "trailing", "between", "all"), spacing = 1){
-                        
+CleanSpaces <- function(data,
+                        option=c("leading", "trailing", "between", "all"),
+                        spacing = 1,
+                        returnType = c("string", "vector")){
+  ###
+  # Check safe
+  optionS <- c("leading", "trailing", "between", "all")
+  returnTypeS <- c("string", "vector")
+  if(!(option %in% optionS)) return("Invalid option")
+  if(!(returnType %in% returnTypeS)) return("Invalid return type")
+  ###
   
   SPACE <- paste(rep(" ",spacing), collapse = "")
   
@@ -45,5 +54,7 @@ CleanSpaces <- function(data, option=c("leading", "trailing", "between", "all"),
                 trailing = Trailing(x),
                 between = Between(x),
                 all = All(x))
-  return(OUT)
+  
+  if(returnType == "string") return(OUT)
+  else if(returnType == "vector") return(unlist(strsplit(OUT, " ")))
 }
